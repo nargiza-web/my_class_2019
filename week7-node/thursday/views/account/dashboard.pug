@@ -1,0 +1,21 @@
+extend account
+
+append content
+   h3 Dashboard
+   p Hello, #{name} welcome to the dashboard
+
+   h5 My Favourite Menu
+
+   if !favMenus.length
+      p No favourite menu yet, add one below
+
+   if favMenus.length
+      each menu in favMenus
+        li= menu.title
+
+   hr
+   form.form-inline(method="POST" action="/account/add")
+      .form-group.mb-2
+        label.sr-only(for="title") Title
+        input#title.form-control(name="title" type="text" placeholder="Enter easy menu")
+      button.btn.btn-primary.mb-2 Add
