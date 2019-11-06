@@ -1,13 +1,25 @@
 .header {
-    background-color: #eee;
+    background-color: #19f20a;
 }
-
+ .image {
+     width: 60px;
+     height:auto;
+ }
+ #applePicture {
+    content: url("/images/apple1.png");
+    height: 50px;
+    width: 50px;
+ }
 .header-title {
     font-size: 20px;
     margin: 0;
+    
 }
 
 .content {
     min-height: 80vh;
     padding: 20px 0;
+}
+.h2color{
+    color: #19f20a;
 }

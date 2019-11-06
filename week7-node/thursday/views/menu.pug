@@ -2,4 +2,14 @@ extend layout
 
 block content
     a(href="/menus") Back to Menu
-    h2= menu.title
+    h2= dishesKey[0].category 
+    ul
+    each dish in dishesKey
+        li
+            -var urlSlug = dish.id
+            a(href="/menus/" + urlSlug)= dish.title 
+
+
+            //- Changed link in menus.pug
+            //- Change References in menu.pug
+            //- 
